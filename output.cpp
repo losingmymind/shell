@@ -3,13 +3,17 @@
 
 using namespace std;
 
-
 void shell::outputPrompt()
 {
-	cout << shell::getDefaultPromptString() << " ";
+	cout << shell::getPrimaryPromptString() << " ";
 }
 
-string shell::getDefaultPromptString()
+string shell::getPrimaryPromptString()
+{
+	return string("$");
+}
+
+string shell::getSecondaryPromptString()
 {
 	return string(">>");
 }
